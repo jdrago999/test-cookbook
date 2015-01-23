@@ -434,9 +434,6 @@ GEM
       uuidtools (~> 2.1.2)
     wmi-lite (1.0.0)
     yajl-ruby (1.1.0)
-    yarjuf (2.0.0)
-      builder
-      rspec (~> 3)
 
 PLATFORMS
   ruby
@@ -451,4 +448,3 @@ DEPENDENCIES
   rake
   serverspec
   test-kitchen (~> 1.0)
-  yarjuf

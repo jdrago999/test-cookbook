@@ -6,7 +6,7 @@ gem "chefspec"
 gem "foodcritic", "~> 3.0"
 gem "serverspec"
 gem "rake"
-gem "yarjuf"
+#gem "yarjuf"
 
 group :integration do
   gem "test-kitchen", "~> 1.0"

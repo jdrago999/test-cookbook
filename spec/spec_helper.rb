@@ -7,9 +7,6 @@ require "serverspec"
 
 
 RSpec.configure do |config|
-  config.before :all do
-    config.path = "/sbin:/usr/sbin"
-  end
   # Specify the path for Chef Solo to find cookbooks
   # config.cookbook_path = '/var/cookbooks'
 
