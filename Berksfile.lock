@@ -1,0 +1,24 @@
+{
+  "sources": {
+    "apt": {
+      "locked_version": "2.6.1"
+    },
+    "build-essential": {
+      "locked_version": "2.1.3"
+    },
+    "ruby_build": {
+      "locked_version": "0.8.0"
+    },
+    "rbenv": {
+      "locked_version": "0.7.3",
+      "git": "https://github.com/muskox/chef-rbenv",
+      "ref": "7b1b96356ac61072c1d2c181642f98bb5c09bd7e"
+    },
+    "test-cookbook": {
+      "path": "."
+    },
+    "java": {
+      "locked_version": "1.29.0"
+    }
+  }
+}

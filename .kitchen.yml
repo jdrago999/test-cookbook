@@ -1,0 +1,41 @@
+---
+driver:
+  name: vagrant
+  synced_folders:
+    - ["./", "/var/www/cookbooks"]
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[apt]
+      - recipe[build-essential]
+      - recipe[ruby_build]
+      - recipe[rbenv::user]
+      - recipe[test-cookbook]
+    attributes:
+      rbenv:
+        user_installs:
+          -
+            user: vagrant
+            rubies: ['2.0.0-p576']
+            global: '2.0.0-p576'
+            gems:
+              '2.0.0-p576':
+                -
+                  name: bundler
+
+      # rbenv:
+      #   plugins:
+      #   - name: rbenv-vars
+      #     git_url: https://github.com/sstephenson/rbenv-vars.git
+      #   rubies:
+      #   - name: 2.0.0-p576
+      #     environment:
+      #       CONFIGURE_OPTS: --disable-install-rdoc
+      #   global: 2.0.0-p576
