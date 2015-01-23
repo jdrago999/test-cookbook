@@ -7,11 +7,25 @@
 file '/tmp/hello.txt' do
   content "hello world -- #{node['test-cookbook']['foo']}\n"
 end
+ruby_version = '2.0.0-p576'
+node.default['rbenv']['user_installs'] = [
+  user: 'vagrant',
+  rubies: [ruby_version],
+  global: ruby_version,
+  gems: {
+    ruby_version: [
+      {name: 'bundler'}
+    ]
+  }
+]
+
 
 include_recipe  "apt"
 include_recipe  "build-essential"
 include_recipe  "ruby_build"
-include_recipe 'rbenv'
+include_recipe 'rbenv::user'
+
+
 
 #package 'libxml2-dev'
 #package 'libxslt-dev'
