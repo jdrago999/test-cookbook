@@ -23,7 +23,7 @@ node.default['rbenv']['user_installs'] = [
 include_recipe  "apt"
 include_recipe  "build-essential"
 include_recipe  "ruby_build"
-include_recipe 'rbenv'
+include_recipe 'rbenv::user'
 
 
 
