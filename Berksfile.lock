@@ -14,50 +14,10 @@
       "name": "build-essential"
     },
     {
-      "version": "1.1.6",
-      "name": "chef_handler"
-    },
-    {
-      "version": "2.2.2",
-      "name": "dmg"
-    },
-    {
-      "version": "4.1.0",
-      "name": "git"
-    },
-    {
-      "version": "2.0.1",
-      "name": "ohai"
-    },
-    {
-      "version": "1.7.1",
-      "name": "rbenv"
-    },
-    {
-      "version": "0.8.0",
-      "name": "ruby_build"
-    },
-    {
-      "version": "1.5.14",
-      "name": "runit"
-    },
-    {
       "version": "0.1.0",
       "metadata": true,
       "location": ".",
       "name": "test-cookbook"
-    },
-    {
-      "version": "1.36.1",
-      "name": "windows"
-    },
-    {
-      "version": "3.5.2",
-      "name": "yum"
-    },
-    {
-      "version": "0.6.0",
-      "name": "yum-epel"
     }
   ],
   "errors": [
