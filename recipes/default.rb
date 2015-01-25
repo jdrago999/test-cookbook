@@ -12,6 +12,8 @@ include_recipe  'apt'
 package  'build-essential'
 package 'ruby2.0'
 package 'ruby2.0-dev'
+package 'libxml2-dev'
+package 'libxslt-dev'
 
 bash 'make ruby2.0 the default' do
   not_if 'ruby --version | grep "ruby 2."'
