@@ -1,6 +1,6 @@
 
-source "https://supermarket.getchef.com"
-
+#source "https://supermarket.getchef.com"
+site :opscode
 cookbook 'apt'
 
 metadata

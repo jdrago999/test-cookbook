@@ -1,29 +1,10 @@
-{
-  "cookbooks": [
-    {
-      "version": "",
-      "location": "source at .",
-      "name": "test-cookbook (0.1.0)"
-    },
-    {
-      "version": "0.1.0",
-      "metadata": true,
-      "location": ".",
-      "name": "test-cookbook"
-    },
-    {
-      "version": "2.6.1",
-      "name": "apt"
-    }
-  ],
-  "errors": [
+DEPENDENCIES
+  apt
+  test-cookbook
+    path: .
+    metadata: true
 
-  ],
-  "messages": [
-    "Resolving cookbook dependencies...",
-    "Fetching cookbook index from https://supermarket.getchef.com..."
-  ],
-  "warnings": [
-    "Your lockfile at '/Users/john/Projects/test-cookbook/Berksfile.lock' is empty. I am going to parse it anyway, but there is a chance that a larger problem is at play. If you manually edited your lockfile, you may have corrupted it."
-  ]
-}
+GRAPH
+  apt (2.6.1)
+  test-cookbook (0.1.0)
+    apt (>= 0.0.0)
