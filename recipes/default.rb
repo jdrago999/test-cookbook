@@ -19,6 +19,5 @@ bash 'make ruby2.0 the default' do
 end
 
 bash 'install bundler gem' do
-  not_if 'bundler --version'
-  code 'gem install bundler'
+  code 'bundler --version || gem install bundler'
 end
