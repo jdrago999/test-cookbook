@@ -1,5 +1,5 @@
 require "chefspec"
-require "chefspec/berkshelf"
+#require "chefspec/berkshelf"
 #require "yarjuf"
 require "serverspec"
 # include Serverspec::Helper::Exec
