@@ -5,7 +5,7 @@
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
 file '/tmp/hello.txt' do
-  content "hello world -- #{node['test-cookbook']['foo']} -- updated!\n"
+  content "hello world -- #{node['test-cookbook']['foo']} -- updated...again!\n"
 end
 
 include_recipe  'apt'
