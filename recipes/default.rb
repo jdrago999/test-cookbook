@@ -16,6 +16,7 @@ package 'libxml2-dev'
 package 'libxslt-dev'
 package 'libssl-dev'
 package 'libcrypto++-dev'
+package 'nginx'
 
 bash 'make ruby2.0 the default' do
   not_if 'ruby --version | grep "ruby 2."'
