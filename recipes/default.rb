@@ -15,6 +15,7 @@ package 'ruby2.0-dev'
 package 'libxml2-dev'
 package 'libxslt-dev'
 package 'libssl-dev'
+package 'libcrypto++-dev'
 
 bash 'make ruby2.0 the default' do
   not_if 'ruby --version | grep "ruby 2."'
@@ -25,11 +26,11 @@ bash 'install bundler gem' do
   code 'gem install bundler'
 end
 
-bash 'bundle install' do
-  cwd '/var/www/simple-app'
-  user 'ubuntu'
-  code 'bundle install'
-end
+# bash 'bundle install' do
+#   cwd '/var/www/simple-app'
+#   user 'ubuntu'
+#   code 'bundle install'
+# end
 
 service 'nginx' do
   supports status: true, restart: true, reload: true
