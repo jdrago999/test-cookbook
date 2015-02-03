@@ -14,6 +14,7 @@ package 'ruby2.0'
 package 'ruby2.0-dev'
 package 'libxml2-dev'
 package 'libxslt-dev'
+package 'libssl-dev'
 
 bash 'make ruby2.0 the default' do
   not_if 'ruby --version | grep "ruby 2."'
@@ -23,3 +24,20 @@ end
 bash 'install bundler gem' do
   code 'gem install bundler'
 end
+
+bash 'bundle install' do
+  cwd '/var/www/simple-app'
+  user 'ubuntu'
+  code 'bundle install'
+end
+
+service 'nginx' do
+  supports status: true, restart: true, reload: true
+  action [:enable, :start]
+end
+
+template '/etc/nginx/sites-available/default' do
+  source 'nginx.conf.erb'
+  notifies :reload, 'service[nginx]'
+end
+

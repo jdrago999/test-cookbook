@@ -1,0 +1,20 @@
+upstream sinatra {
+  server 127.0.0.1:4567;
+}
+
+server {
+  listen 80;
+
+  root <%= node['test-cookbook']['installation_path'] %>/public/;
+
+  client_max_body_size       3M;
+
+  location / {
+    try_files $uri @service;
+  }
+
+  location @service {
+    proxy_pass         http://sinatra;
+    proxy_set_header   Host $host;
+  }
+}
